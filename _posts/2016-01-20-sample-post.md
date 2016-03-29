@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Sample post
+title: 广告点击率预估系列--E&E
 ---
 
-This is what a post on your blog looks like. This template is especially well suited for posting nice succint blurbs, much like [Seth Godin](http://sethgodin.typepad.com/) does. Of course, it will also work well with longer posts, and you can change the number of posts per page in the `_config.yml` file. There's no guarentee this blog will make you write as well as he does, but it will present your writings in a beautiful, clean, and distraction-free way. Try to write a little bit, every day.
+E&E tradeoff一般翻译成探索与利用的困境问题，最初是在multi-armed bandit problem（多臂老虎机问题）中得到研究。假设有K个老虎机放在我们面前,我们首先给它们编号1,...i,...,K，每一轮我们可以选择一个老虎机来按，同时记录老虎机给出的奖励. 假设各个老虎机不是完全相同的，经过多轮操作后，我们可以勘探出各个老虎机的部分统计信息，下一轮选择我们可以更加这些统计信息选择按一个相对收益大的老虎机。有一个经典的智力面试题和这个问题相关，大家不妨先思考一下：一楼到十楼的每层电梯门口都放着一颗钻石，钻石大小不一。你乘坐电梯从一楼到十楼，每层楼电梯门都会打开一次，只能拿一次钻石，问怎样才能得到最大的期望收益？ 
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+在广告点击率估计中，一般把问题建模成一个监督式学习问题。由于实际中模型的结果会影响最终训练样本的收集，因此在应用中我们要考虑到怎么去收集有用的训练样本。
