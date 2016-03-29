@@ -12,6 +12,7 @@ baseurl: '' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site http://www.example.com
 # google_analytics: 'UA-XXXXXX-X'
 weibo_username: 'tommink'
+weibo_url: 'tomknuth'
 
 # Build settings
 markdown: kramdown
