@@ -9,39 +9,37 @@ title: 机器学习中的特征管理
 ----------------
 
 特征管理平台管理整个公司挖掘的所有特征，以供下游消费特征的用户能方便的利用已有的特征。特征管理平台由数据存储平台、用户浏览界面以及元数据配置组成。特征的元数据配置文件存储在数据库中或在hdfs公共访问的位置。特征的元数据配置文件包含了特征的获取位置，特征相关联的key，特征是否有效，特征的描述，特征的类型等，一个json的例子如下：
-```json
-{ 
-  "hive_address": {
-    "user_gender_addr": {
-      "path": "hdfs:///remote/user/gender_addr",
-      "coloum": 2
-     },
-  },
-  "db_address": {
-    "ad_industry_addr": {
-      "db_name": "ad_biz_table",
-      "db_table": "ad_industry",
-      "key_name": "ad_id",
-      "value_name": "industry_id"
-     },
-  }
-  "features": [
-    {
-      "feature_name": "user_gender",
-      "key": "user_cookie_id",
-      "type": "categorical",
-      "address": "user_gender_addr",
-      "description": "predicted user gender info, 0 indicates male, 1 indicates female", 
-      "effective": "1",
-    },
-    {
-      "feature_name": "ad_industry",
-      "key": "ad_id",
-      "type": "categorical",
-      "address": "ad_industry_addr",
-      "description" "predicted advertiser's industry",
-      "effective": "1",
-    },
-  ]
-}
-```
+	{ 
+	  "hive_address": {
+	    "user_gender_addr": {
+	      "path": "hdfs:///remote/user/gender_addr",
+	      "coloum": 2
+	     },
+	  },
+	  "db_address": {
+	    "ad_industry_addr": {
+	      "db_name": "ad_biz_table",
+	      "db_table": "ad_industry",
+	      "key_name": "ad_id",
+	      "value_name": "industry_id"
+	     },
+	  }
+	  "features": [
+	    {
+	      "feature_name": "user_gender",
+	      "key": "user_cookie_id",
+	      "type": "categorical",
+	      "address": "user_gender_addr",
+	      "description": "predicted user gender info, 0 indicates male, 1 indicates female", 
+	      "effective": "1",
+	    },
+	    {
+	      "feature_name": "ad_industry",
+	      "key": "ad_id",
+	      "type": "categorical",
+	      "address": "ad_industry_addr",
+	      "description" "predicted advertiser's industry",
+	      "effective": "1",
+	    },
+	  ]
+	}
