@@ -4,7 +4,6 @@ title: "合约广告中的流量分配算法"
 subtitle:   "ad allocation"
 date:       2016-01-30 12:00:00
 author:     "Ming Tong"
-header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
     - 流量分配

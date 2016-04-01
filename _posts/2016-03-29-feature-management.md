@@ -3,7 +3,6 @@ layout: post
 title: "机器学习中的特征管理"
 date:       2016-01-29 12:00:00
 author:     "Ming Tong"
-header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
     - 广告点击率
