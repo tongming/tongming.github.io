@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "指数相关性及收益率分析"
-date:       2016-04-03 12:00:00
-author:     "Ming Tong"
+date:       2016-04-02 12:00:00
 catalog: true
 tags:
     - 资产分配
