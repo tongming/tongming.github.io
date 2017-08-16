@@ -23,8 +23,8 @@ tf.Variable是非常常用的一种Tensor，顾名思义，Varible就是可以�
 下面给一个简单的例子，大家直观感受下
 ```
   import tensorflow as tf
-  x = tf.Variable(3)
-  y = tf.Variable(5)
+  x = tf.Variable(3, 'x')
+  y = tf.Variable(5, 'y')
   a = tf.add(x,y)
   sess = tf.Session()
   init = tf.global_variables_initializer()
