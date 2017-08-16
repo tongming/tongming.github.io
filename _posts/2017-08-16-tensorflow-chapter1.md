@@ -74,10 +74,9 @@ Constant和Variable相反，Constant的值在生命周期中不能修改，常�
   a = x + y
 
   with tf.Session() as sess:
-    sess.run(tf.global_variables_initializer())
     writer = tf.summary.FileWriter("./graphs", sess.graph)
     print(sess.run(a))
 ```
 tensorboard生成的图像如下：
 ![avatar](/img/tensor_cha1_2.png)
-
+从代码和图中可以看出Constant和Variable的区别，一是Constant不需要initalize，另外Constant被直接保存在Graph中，如果大规模的Constant，那么程序每次load和store模型都会比较耗时，因此一般来讲Constant只用来代表primitive类型。
