@@ -96,3 +96,14 @@ with tf.Session() as sess:
   sess.run(c, {x:[1,2,4], y:[2,3,4]}) # return [3,5,8]
 ```
 Placeholder和Variable的用法差不多，一般我们用Placeholder来表示训练数据，这样的话就可以在训练阶段feed给训练数据。
+
+## Operation
+Operation其实在上面的代码段中已经有接触，每一个operation相当于图中的一个节点，比如我们在之前用到的tf.Add就是一个Operation。每一个Operationyou 0个或多个tensor输入，并且输出0或多个tensor。tensorflow中包含的Operation非常多，大多数时候都能满足我们的需求，或者我们可以通过组合Operation满足运算的需求（当然，这样可能会影响性能）。
+关于自定义Operation，会在后续高阶的章节中介绍。
+
+## Graph
+在之前的几节中，我一直在说图，读者可能会疑惑，因为我们的代码段中都没有出现过Graph的类。之所以在之前的代码中，我们没有显示的创建Graph，是因为tensorflow会创建一个默认的graph。
+```
+c = tf.constant(4.0)
+assert c.graph is tf.get_default_graph()
+```
