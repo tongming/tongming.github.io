@@ -17,13 +17,25 @@ tensor实质上就是一个n维矩阵，tensor里的所有元素类型必须相�
 - tf.Placeholder
 - tf.SparseTensor 
 
+tf.Variable是非常常用的一种Tensor，顾名思义，Varible就是可以改变的Tensor（严谨的说，Variable并不是Tensor的子类，而是内部有一个Tensor的handle）。Variable在程序中一般用来表示我们需要学习的参数。
+
+
 下面给一个简单的例子，大家直观感受下
 ```
   import tensorflow as tf
-  a = tf.add(3,5)
+  x = tf.Variable(3)
+  y = tf.Variable(5)
+  a = tf.add(x,y)
   sess = tf.Session()
+  init = tf.global_variables_initializer()
+  sess.run(init)
   print a
-  print a.eval()
+  print a.eval(session=sess)
+  sess.close()
+```
+```
+  >> Tensor("Add:0", shape=(), dtype=int32)
+  >> 7
 ```
 利用tensorboard生成的图（关于tensorboard，在后面会有专门的一个章节介绍，大家可以先不用去了解）
 ![avatar](/img/tensor_cha1.png)
