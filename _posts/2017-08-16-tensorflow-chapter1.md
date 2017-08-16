@@ -9,7 +9,7 @@ tags:
     - tensorflow
 ---
 
-tensorflow中最重要的几个概念分别是tensor，operation，graph，session。从tensorflow的名字可以看出其主要的计算方式是通过tensor -> flow来计算的，那么tensor在什么上面flow了？你可能已经猜到了，就是graph上面。因此tensorflow的一个基本编程模型就是通过先定义一个graph，然后创建一个session，把graph放到不同的device上进行计算。在这个章节中，通过阅读这篇文章，希望读者能够了解tensorflow的基本概念以及常用的API。
+tensorflow中最重要的几个概念分别是tensor，operation，graph，session。从tensorflow的名字可以看出其主要的计算方式是通过tensor -> flow来计算的，那么tensor在什么上面flow了？你可能已经猜到了，就是graph上面。因此tensorflow的一个基本编程模型就是通过先定义一个graph，然后创建一个session，把graph放到不同的device上进行计算。通过这个章节的介绍，希望读者能够了解tensorflow的基本概念以及常用的API。
 
 ## Tensor
 tensor实质上就是一个n维矩阵，tensor里的所有元素类型必须相同，tensor可以作为opertion的输入或输出，在实际编程中，用得更多的是以下几种"tensor"。
@@ -80,6 +80,6 @@ Constant和Variable相反，Constant的值在生命周期中不能修改，常�
 ```
 tensorboard生成的图像如下：
 ![avatar](/img/tensor_cha1_2.png)
-从代码和图中可以看出Constant和Variable的区别，一是Constant不需要initalize，另外Constant被直接保存在Graph中，如果大规模的Constant，那么程序每次load和store模型都会比较耗时，因此一般来讲Constant只用来代表primitive类型。
+从代码和图中可以看出Constant和Variable的区别，一是Constant不需要initalize，另外Constant被直接保存在Graph中，如果大规模的Constant，那么程序每次load和store模型都会比较耗时，因此一般来讲Constant只用来代表primitive类型。这里给读者留的一个问题是，tf.constant是小写，而tf.Variable是大写，这是什么原因了？
 
 ### Placeholder
