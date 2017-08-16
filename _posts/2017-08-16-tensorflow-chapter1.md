@@ -18,9 +18,10 @@ tensor实质上就是一个n维矩阵，tensor里的所有元素类型必须相�
 - tf.SparseTensor 
 
 下面给一个简单的例子，大家直观感受下
-` import tensorflow as tf
+```
+  import tensorflow as tf
   a = tf.add(3,5)
   sess = tf.Session()
   print a
   print a.eval()
-`
+```
