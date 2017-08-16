@@ -66,6 +66,7 @@ Constant和Variable相反，Constant的值在生命周期中不能修改，常�
 - tf.ones_like
 - tf.fill
 - tf.constant
+
 前面5个函数，numpy中有类似的函数，我在这里不再详细解释其功能，读者朋友可以自己去查看相关API，我们主要看看tf.constant的功能。先看下面的例子：
 ```
   import tensorflow as tf
@@ -80,3 +81,5 @@ Constant和Variable相反，Constant的值在生命周期中不能修改，常�
 tensorboard生成的图像如下：
 ![avatar](/img/tensor_cha1_2.png)
 从代码和图中可以看出Constant和Variable的区别，一是Constant不需要initalize，另外Constant被直接保存在Graph中，如果大规模的Constant，那么程序每次load和store模型都会比较耗时，因此一般来讲Constant只用来代表primitive类型。
+
+### Placeholder
